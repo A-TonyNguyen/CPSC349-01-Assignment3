@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Payment Form</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css" />
+    <link href="stylesheets/payment-form.css" rel="stylesheet">
+</head>
+
+<body>
+    <form data-coffee-order="form">
+        <h1>Payment Form</h1>
+        <a href="index.html">Go back to Order Form</a>
+        <p>* Required</p>
+        <section>
+            <h2>Contact Information</h2>
+            <fieldset>
+                <legend>Title</legend>
+                <ul>
+                    <li>
+                        <label for="title_1">
+                            <input type="radio" id="title_1" name="title" value="Captain">
+                            Captain
+                        </label>
+                    </li>
+                    <li>
+                        <label for="title_2">
+                            <input type="radio" id="title_2" name="title" value="King">
+                            King
+                        </label>
+                    </li>
+                    <li>
+                        <label for="title_3">
+                            <input type="radio" id="title_3" name="title" value="Queen">
+                            Queen
+                        </label>
+                    </li>
+                </ul>
+            </fieldset>
+            <p>
+                <label for="name">
+                    <span>Name: </span>
+                    <strong>*</strong>
+                </label>
+                <input type="text" id="name" name="name" required>
+            </p>
+            <p>
+                <label for="mail">
+                    <span>E-mail: </span>
+                    <strong>*</strong>
+                </label>
+                <input type="email" id="mail" name="usermail" required>
+            </p>
+            <p>
+                <label for="pwd">
+                    <span>Password: </span>
+                    <strong>*</strong>
+                </label>
+                <input type="password" id="pwd" name="password" required>
+            </p>
+        </section>
+        <section>
+            <h2>Payment Information</h2>
+            <p>
+                <label for="card">
+                    <span>Card type:</span>
+                </label>
+                <select id="card" name="usercard">
+                    <option value="visa">Visa</option>
+                    <option value="mc">Mastercard</option>
+                    <option value="amex">American Express</option>
+                </select>
+            </p>
+            <p>
+                <label for="number">
+                    <span>Card number:</span>
+                    <strong>*</strong>
+                </label>
+                <input type="tel" id="number" name="cardnumber" required>
+            </p>
+            <p>
+                <label for="date">
+                    <span>Expiration date:</span>
+                    <strong>*</strong>
+                </label>
+                <input type="date" id="date" name="expiration" required>
+            </p>
+        </section>
+        <section>
+            <button type="submit" class="btn btn-default">Submit Payment</button>
+        </section>
+        <section>
+            <!-- Modal HTML embedded directly into document -->
+            <div id="thankyouMessage" class="modal">
+                <p>Thank you for your payment, <span id="titleMessage"></span> <span id="nameMessage"></span></p>
+                <a href="#" rel="modal:close">Close</a>
+            </div>
+
+        </section>
+    </form>
+</body>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js" charset="utf-8"></script>
+<script src="scripts/formhandler.js" charset="utf-8"></script>
+<script src="scripts/datastore.js" charset="utf-8"></script>
+<script src="scripts/truck.js" charset="utf-8"></script>
+<script src="scripts/payment.js" charset="utf-8"></script>
+
+<!-- Remember to include jQuery :) -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
+<!-- jQuery Modal -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
+
+</html>
